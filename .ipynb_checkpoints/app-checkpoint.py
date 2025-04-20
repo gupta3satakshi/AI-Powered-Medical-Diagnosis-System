@@ -56,10 +56,10 @@ st.markdown(f"""
 
 # ---------------- Load Models ----------------
 models = {
-    'diabetes': pickle.load(open('C:/Users/Satakshi Gupta/OneDrive/Desktop/major project/Medical diagnosis using AI/Models/diabetes_model_selected.sav', 'rb')),
-    'heart_disease': pickle.load(open('C:/Users/Satakshi Gupta/OneDrive/Desktop/major project/Medical diagnosis using AI/Models/heart_disease_model.sav', 'rb')),
-    'parkinsons': pickle.load(open('C:/Users/Satakshi Gupta/OneDrive/Desktop/major project/Medical diagnosis using AI/Models/parkinson_rf_model.sav', 'rb')),
-    'lung_cancer': pickle.load(open('C:/Users/Satakshi Gupta/OneDrive/Desktop/major project/Medical diagnosis using AI/Models/lungs_disease_model.sav', 'rb')),
+    'diabetes': pickle.load(open('Models/diabetes_model_selected.sav', 'rb')),
+    'heart_disease': pickle.load(open('Models/heart_disease_model.sav', 'rb')),
+    'parkinsons': pickle.load(open('Models/parkinson_rf_model.sav', 'rb')),
+    'lung_cancer': pickle.load(open('Models/lungs_disease_model.sav', 'rb')),
 }
 
 # ---------------- Sidebar Menu ----------------
