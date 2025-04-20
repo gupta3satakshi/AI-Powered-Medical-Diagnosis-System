@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import os
 from streamlit_option_menu import option_menu
 
 # ----------------- Streamlit Page Setup --------------------
@@ -55,12 +56,19 @@ st.markdown(f"""
 
 
 # ---------------- Load Models ----------------
+
+
+# Define base path to current file location
+base_path = os.path.dirname(__file__)
+model_dir = os.path.join(base_path, 'Models')
+
 models = {
-    'diabetes': pickle.load(open('Models/diabetes_model_selected.sav', 'rb')),
-    'heart_disease': pickle.load(open('Models/heart_disease_model.sav', 'rb')),
-    'parkinsons': pickle.load(open('Models/parkinson_rf_model.sav', 'rb')),
-    'lung_cancer': pickle.load(open('Models/lungs_disease_model.sav', 'rb')),
+    'diabetes': pickle.load(open(os.path.join(model_dir, 'diabetes_model_selected.sav'), 'rb')),
+    'heart_disease': pickle.load(open(os.path.join(model_dir, 'heart_disease_model.sav'), 'rb')),
+    'parkinsons': pickle.load(open(os.path.join(model_dir, 'parkinson_rf_model.sav'), 'rb')),
+    'lung_cancer': pickle.load(open(os.path.join(model_dir, 'lungs_disease_model.sav'), 'rb')),
 }
+
 
 # ---------------- Sidebar Menu ----------------
 with st.sidebar:
